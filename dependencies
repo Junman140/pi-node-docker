@@ -6,7 +6,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y curl wget git apt-transport-https \
                    libpq-dev libsqlite3-dev libsasl2-dev \
-                   postgresql-client postgresql postgresql-contrib \
+                   postgresql-client-16 postgresql-16 postgresql-contrib \
                    sudo vim zlib1g-dev supervisor psmisc \
                    jq netcat # Parsing stellar-core JSON for standalone network and checking core HTTP server
 apt-get clean

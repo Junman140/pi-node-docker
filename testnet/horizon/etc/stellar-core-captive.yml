@@ -1,0 +1,39 @@
+# Pi Testnet (original) - Captive Core Configuration
+#
+# === HOW TO FILL IN THE VALIDATORS ===
+#
+# Copy the [[VALIDATORS]] sections from the stellar-core.cfg in this same directory:
+#   pi-node-docker/testnet/core/etc/stellar-core.cfg
+#
+# Each validator needs: NAME, QUALITY, HOME_DOMAIN, PUBLIC_KEY, ADDRESS, HISTORY
+#
+# After filling in, rebuild the image:
+#   cd pi-node-docker && make build
+#
+NETWORK_PASSPHRASE = "Pi Testnet"
+
+# === Replace these placeholder validators with actual Pi Testnet (original) values ===
+
+[[VALIDATORS]]
+NAME="validator1"
+QUALITY="HIGH"
+HOME_DOMAIN="pi-core-team"
+PUBLIC_KEY="__TESTNET_VALIDATOR1_KEY__"      # e.g. "GDFDDPMCL4WPV27Z5Q7R6I2BX3UXOHJIU6AXXIFOCUEDEA4GWU2I4TJZ"
+ADDRESS="__TESTNET_VALIDATOR1_ADDR__"        # e.g. "34.152.3.42:31402"
+HISTORY="curl -sf https://history.testnet.minepi.com/{0} -o {1}"
+
+[[VALIDATORS]]
+NAME="validator2"
+QUALITY="HIGH"
+HOME_DOMAIN="pi-core-team"
+PUBLIC_KEY="__TESTNET_VALIDATOR2_KEY__"      # e.g. "GDOJPADI56GTIP46K6YSRFOSEL2BW5WCYIKPFB5ZMY7YT3H2FRSAGI4J"
+ADDRESS="__TESTNET_VALIDATOR2_ADDR__"        # e.g. "35.228.163.61:31402"
+HISTORY="curl -sf https://history.testnet.minepi.com/{0} -o {1}"
+
+[[VALIDATORS]]
+NAME="validator3"
+QUALITY="HIGH"
+HOME_DOMAIN="pi-core-team"
+PUBLIC_KEY="__TESTNET_VALIDATOR3_KEY__"      # e.g. "GAOBNDXTZSMJB5N3J5V5RZLYRN4EKQS5GIT25LCQS4AIBUJ3SMVMDR2Q"
+ADDRESS="__TESTNET_VALIDATOR3_ADDR__"        # e.g. "34.79.206.31:31402"
+HISTORY="curl -sf https://history.testnet.minepi.com/{0} -o {1}"
